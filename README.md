@@ -1,1 +1,1 @@
-Basic Template for modules
+Test Template
