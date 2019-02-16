@@ -1,12 +1,12 @@
 Fork the repository in your Github account
 
-under create a module "test" under  src/areas/lead-test/lib
+create a module "test" under  src/areas/lead-test/lib
 
-create routingmodule for test
+create routingmodule for "test"
 
-create service for test
+create service for "test"
 
-create components under lead-test/components 
+create components under lib/components folder
 
     - list pumps
 
@@ -15,7 +15,7 @@ create components under lead-test/components
 
         Paging should be done using angular material table
 
-        display progress bar
+        display progress bar and use angular material components when possible
 
     - Save pumps
 
