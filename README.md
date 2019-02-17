@@ -17,6 +17,8 @@ create components under lib/components folder
 
         display progress bar and use angular material components when possible
 
+        Use Angular translate (ngx-translate) to display at least on statment on the page from JSON translation file
+
     - Save pumps
 
             http://pumpapi.crowdthem.com/api/PumpsAPI/SavePump
