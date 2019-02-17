@@ -20,6 +20,7 @@ create components under lib/components folder
         Use Angular translate (ngx-translate) to display at least on statment on the page from JSON translation file
 
     - Save pumps
+            Open edit pop up using angular material dialog
 
             http://pumpapi.crowdthem.com/api/PumpsAPI/SavePump
 
