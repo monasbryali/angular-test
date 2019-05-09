@@ -18,6 +18,8 @@ create components under lib/components folder
         display progress bar and use angular material components when possible
 
         Use Angular translate (ngx-translate) to display at least on statment on the page from JSON translation file
+        
+        Store and get the User current language variable in a service (ex: lang = 'en')
 
     - Save pumps
             Open edit pop up using angular material dialog
