@@ -19,7 +19,7 @@ create components under lib/components folder
 
         Use Angular translate (ngx-translate) to display at least on statment on the page from JSON translation file
         
-        Store and get the User current language variable in a service (ex: lang = 'en')
+        Store and get the User current language variable in an observable variable in a seperate service (ex: lang = 'en')
 
     - Save pumps
             Open edit pop up using angular material dialog
