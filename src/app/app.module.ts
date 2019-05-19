@@ -3,12 +3,17 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterModule, Routes } from '@angular/router';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule, MatIconModule, MatProgressBarModule, MatProgressSpinnerModule} from '@angular/material';
 import { TranslateModule ,TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgProgressModule } from '@ngx-progressbar/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import 'hammerjs';
 
 
@@ -19,6 +24,9 @@ import { MatSnackBarModule } from "@angular/material";
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HeaderComponent } from './Navigation/header/header.component';
 
 
 
@@ -28,6 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
     declarations: [
         Lead,
+        HomeComponent,
+        NotFoundComponent,
+        HeaderComponent,
       
     ],
     imports     : [
@@ -42,7 +53,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatProgressSpinnerModule,
     FormsModule,
     TestModule,
- 
+    FlexLayoutModule,
 
 //        RouterModule.forRoot(appRoutes),
    //     AccountModule,
@@ -66,7 +77,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 
         // Material
         MatButtonModule,
-        MatIconModule
+        MatIconModule,
+        MatTooltipModule,
+        MatSidenavModule,
+        MatToolbarModule
         
         ,AppRoutingModule //routing module should be at end
         
