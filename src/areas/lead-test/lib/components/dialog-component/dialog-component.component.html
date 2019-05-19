@@ -1,0 +1,20 @@
+
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.Id" placeholder="Type Your ID">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.Name" placeholder="Type Your Name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.TankTotalCapacity" placeholder="Type TankTotalCapacity">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.TankRemainedCapacity" placeholder="Type TankRemainedCapacity">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
