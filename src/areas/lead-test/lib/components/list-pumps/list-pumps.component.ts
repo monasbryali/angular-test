@@ -5,8 +5,10 @@ import { NgProgress } from '@ngx-progressbar/core';
 
 import { DOCUMENT } from '@angular/common';
 import{TestServiceService} from '../../test/test-service.service';
-
+import{LanguageserviceService} from '../languageservice.service';
 import { Observable } from 'rxjs';
+import { Observer } from "rxjs/Observer";
+
 ///===============================================table=====================
 export interface listPumps {
   $id: string;
@@ -35,6 +37,8 @@ export interface listPumps {
     }     
     LIST_DATA :listPumps[]=[];
     dataSource
+    observ: Observer<string>;
+
      //===============file============
    
     // ==========end file===========
@@ -52,16 +56,25 @@ export interface listPumps {
       private _translateService: TranslateService,
       public ngProgress: NgProgress,
       private  testservice :TestServiceService,
-
+       private langser: LanguageserviceService
     
     ) { 
       _translateService.setDefaultLang('en');
     }
 
    
-    switchLanguage(language: string) {
+    switchLanguage(language:string) {
+  
+  
+   
+    
       this._translateService.use(language);
-
+      this.langser.setlang(language);
+  const mylang=this.langser.getlang();
+  console.log(mylang);
+     
+      // console.log(this.langser.mylanguage) ;
+      
     }
          
   
@@ -75,6 +88,7 @@ export interface listPumps {
       // setTimeout(() => {
       //   this.ngProgress.inc(0.2);
       // }, 2000);
+      
       this.testservice.getdata().subscribe( 
         a=>{   this.ngProgress.done();
           this.LIST_DATA=a.Data; 
@@ -83,7 +97,7 @@ export interface listPumps {
          },
       e=>{console.log(e)}
       )
-      
+    
     }
 
   

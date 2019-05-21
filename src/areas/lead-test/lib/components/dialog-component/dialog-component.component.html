@@ -2,16 +2,16 @@
 <div mat-dialog-content>
   <p>What's your favorite animal?</p>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.Id" placeholder="Type Your ID">
+    <input matInput [(ngModel)]="data.Id" placeholder="Type Your ID" required>
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.Name" placeholder="Type Your Name">
+    <input matInput [(ngModel)]="data.Name" placeholder="Type Your Name" required>
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.TankTotalCapacity" placeholder="Type TankTotalCapacity">
+    <input matInput [(ngModel)]="data.TankTotalCapacity" placeholder="Type TankTotalCapacity" required>
   </mat-form-field>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.TankRemainedCapacity" placeholder="Type TankRemainedCapacity">
+    <input matInput [(ngModel)]="data.TankRemainedCapacity" placeholder="Type TankRemainedCapacity" required>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
