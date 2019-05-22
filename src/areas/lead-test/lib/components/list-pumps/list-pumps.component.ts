@@ -63,17 +63,13 @@ export interface listPumps {
     }
 
    
-    switchLanguage(language:string) {
-  
-  
-   
-    
-      this._translateService.use(language);
-      this.langser.setlang(language);
-  const mylang=this.langser.getlang();
-  console.log(mylang);
-     
-      // console.log(this.langser.mylanguage) ;
+    switchLanguage(language:string) {   
+      this.langser.setlang(language).subscribe(
+        a=>{console.log(a)},
+        e=>{console.log(e);}
+        );
+        this._translateService.use(language);
+
       
     }
          

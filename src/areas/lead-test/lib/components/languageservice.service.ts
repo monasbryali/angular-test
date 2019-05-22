@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import { Observer } from "rxjs/Observer";
+import { of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class lang{
-  lang:string
-}
+
 export class LanguageserviceService {
 
   observable: Observable<string>;
@@ -17,41 +16,16 @@ export class LanguageserviceService {
 
   constructor() { };
 
-//   laguage(a:string){
-//  console.log(a);
-//     this.observable = new Observable(Observer=>{
-//      // this.observer=Observer
-    
-//    // function  savelnaguge(a:string){
-//       const {next, error} = Observer;
-//        let lan=a;
-      
-      
-//     // }
-//     // savelnaguge(a);
-//  });
- 
-//  this.observable.subscribe(
-//     a=>{console.log(a); },
-//     e=>{console.log(e);  }
-//           ) ;
-//      return this.mylanguage =a;
-// }
-// private _loading: boolean = false;
-
-// public get loading():string{
-//     return this.mylanguage;
-// }
-
-// public set loading(isLoading: boolean) {
-//     this._loading = isLoading;
-//     this.changeBtnTxt();
-// }
-getlang(){
-  return this.mylanguage; 
-}
 setlang(a:string){
-  this.mylanguage=a;
+
+ const myObservable  = of(a);
+  const myObserver = {
+    next: x => console.log('Observer got a next value: ' + x),
+    error: err => console.error('Observer got an error: ' + err),
+    complete: () => console.log('Observer got a complete notification'),
+  };
+  myObservable.subscribe(myObserver);
+  return myObservable
 }
 
 }

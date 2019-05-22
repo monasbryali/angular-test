@@ -42,8 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       
     ],
     imports     : [
- CommonModule ,
-
+       CommonModule ,
+       TranslateModule,
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
